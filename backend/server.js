@@ -58,14 +58,14 @@ ${code}
         const explanation = result.response.text();
 
         console.log(explanation); // Log on server side
-        const item = { code, language, prestate, time: Date.now() }
-        History.push(item)
+        // const item = { code, language, prestate, time: Date.now() }
+        // History.push(item)
 
         return res.status(200).json({
+            prompt,
             success: true,
-            data: explanation,
-            message: "successfull",
-            History
+            data: { explanation },
+            message: "successfull"
         });
 
     } catch (err) {
@@ -113,7 +113,7 @@ app.get("/", (req, res) => {
 
 // ----------------------------------------
 
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
     console.log(`Backend running on port ${PORT}`);
 });

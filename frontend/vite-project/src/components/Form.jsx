@@ -1,5 +1,6 @@
 import { useActionState } from "react";
 import { action } from "../actions/action";
+// import Codecopy from "./Copy";
 
 function Form() {
     const [state, formAction, isPending] = useActionState(action, null);
@@ -47,14 +48,14 @@ function Form() {
                 >
                     {isPending ? "Explaining..." : "Explain Code"}
                 </button>
-                <button>hist</button>
+                
             </form>
 
             {/* SUCCESS OUTPUT */}
             {state?.success === true && (
                 <div className="mt-6 p-4 bg-gray-100 rounded-lg whitespace-pre-wrap">
                     <h2 className="font-semibold mb-2">Explanation:</h2>
-                    {state.Data.explanation}
+                    {state.data.explanation}
                 </div>
             )}
 

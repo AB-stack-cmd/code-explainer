@@ -1,6 +1,6 @@
 import google.genai as genai
 
-client = genai.Client(api_key="AIzaSyCrMyMdrIExmFUHMmYnP5TnZMJVxS8n4bM")
+client = genai.Client(api_key="")
 
 # Only run this block for Gemini Developer API
 # client = genai.Client(api_key='GEMINI_API_KEY')
