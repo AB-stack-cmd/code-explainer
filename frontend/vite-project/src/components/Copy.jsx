@@ -6,7 +6,8 @@ export default async function Codecopy({text}){
     
         const CopyToClipboard = async ()=>{ 
             if(!text) return;
-
+           
+            // navigator is the windows object trived 
             await navigator.clipboard.write(text);
                 setcopied(true);// to show copied after the await is successfull
 
@@ -17,7 +18,7 @@ export default async function Codecopy({text}){
 
         return(
             <div>
-                <button onClick={CopyToClipboard}>
+                <button onClick={CopyToClipboard} className=' border-black bg-white rounded-s-md border inline-block text-black'>
                     {copied?"Copied":"Copy"}
                 </button>
             </div>

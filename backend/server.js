@@ -26,6 +26,7 @@ const model = genAI.getGenerativeModel({
 });
 
 // -------------- API ROUTE ----------------
+// Post method -  user sends data to server
 app.post("/api/explain-code", async (req, res) => {
     // REMOVED: res.send("working") - THIS WAS CAUSING THE ERROR
 
@@ -64,7 +65,7 @@ ${code}
         return res.status(200).json({
             prompt,
             success: true,
-            data: { explanation },
+            data: explanation,
             message: "successfull"
         });
 
@@ -115,5 +116,5 @@ app.get("/", (req, res) => {
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
-    console.log(`Backend running on port ${PORT}`);
+    console.log(`Backend running on port ${PORT}...`);
 });
