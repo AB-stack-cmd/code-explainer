@@ -1,6 +1,6 @@
 import qrcode
 
-data =  "Babin Loves You Rititka uuummmaaaahhhhhh 😘"
+data =  ""
 
 qr = qrcode.make(data)
 # qr = qrcode.QRCode

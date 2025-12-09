@@ -2,6 +2,7 @@ import { useActionState } from "react";
 import { action } from "../actions/action";
 import Codecopy from "./Copy";
 import HandleGet from "./handleGet";
+import SideBar from "./SideBar";
 
 
 function Form() {
@@ -9,8 +10,8 @@ function Form() {
 
     return (   
         <div className="w-full max-w-4xl bg-white p-7 rounded-lg shadow-lg mx-auto mt-10">
-             
             <form action={formAction}>
+                <SideBar></SideBar>
                 
                 {/* Language Dropdown */}
                 <label htmlFor="language" className="mb-2 font-semibold block">
@@ -37,12 +38,13 @@ function Form() {
                 <label htmlFor="code" className="mb-2 font-semibold block">
                     Enter Code:
                 </label>
+                <div className="bg-gray-100 rounded-4xl ">
                 <textarea
                     name="code"
                     id="code"
                     placeholder="Paste your code here..."
-                    className="border rounded-lg w-full p-3 h-48 mb-4"
-                ></textarea>
+                    className="outline-none overflow-y-auto resize-none  bg-transparent shadow-inner rounded-2xl w-full p-3 h-10 mb-4 overflow-auto"
+                ></textarea></div>
 
                 {/* Submit */}
                 <button
