@@ -1,1 +1,12 @@
 @import "tailwindcss";
+
+:root {
+    --base-clr: #11121a;
+    --line-clr: #42434a;
+    --hover-clr: #222533;
+    --text-clr: z#
+}
+
+body {
+    background-color: var(--base-clr);
+}

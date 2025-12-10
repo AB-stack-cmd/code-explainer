@@ -4,8 +4,15 @@ export default function SideBar(){
         <nav>
             <ul>
                 <li>
-                    <a href="http://localhost:5173"></a>
-                    onClick
+                    <a href="Form">
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li>
+                    <button id="dropdown-btn" className="bg-black">.</button>
+                    <ul>
+                        New Chat 
+                    </ul>
                 </li>
             </ul>
         </nav>

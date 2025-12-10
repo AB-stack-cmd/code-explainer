@@ -11,7 +11,5 @@ const root = document.getElementById("root")
 createRoot(root).render(
   <StrictMode>
     <App/>
-    {/* <h2 class="text-9xl font-bold "> hello</h2> */}
-    {/* <Form/> */}
   </StrictMode>
 );

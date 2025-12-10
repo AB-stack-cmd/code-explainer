@@ -14,10 +14,10 @@ export async function action(prevState, formData) {
                 body: JSON.stringify({ code, language }),
             });
 
-        if (!res.ok) {
+        if (res.status(400)) {
             return {
                 success: false,
-                error: `Backend returned status ${res.status}`,
+                error: `Backend returned status ${res.status}\n${res.Error}`,
             };
         }
 

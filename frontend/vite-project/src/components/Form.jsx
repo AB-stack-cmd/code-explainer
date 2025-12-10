@@ -3,24 +3,29 @@ import { action } from "../actions/action";
 import Codecopy from "./Copy";
 import HandleGet from "./handleGet";
 import SideBar from "./SideBar";
+import Pageroutes from "./Pagerouter";
+
 
 
 function Form() {
     const [state, formAction, isPending] = useActionState(action, null);
 
-    return (   
-        <div className="w-full max-w-4xl bg-white p-7 rounded-lg shadow-lg mx-auto mt-10">
+    return (  
+        <>
+       
+        <div className="p-15">
+           
             <form action={formAction}>
-                <SideBar></SideBar>
+                
                 
                 {/* Language Dropdown */}
-                <label htmlFor="language" className="mb-2 font-semibold block">
+                <label htmlFor="language" className="mb-2 bg-transparent text-amber-50 font-semibold block">
                     Select Language:
                 </label>
                 <select
                     name="language"
                     id="language"
-                    className="border rounded-lg w-full p-2 mb-4"
+                    className="border bg-gray-100 rounded-4xl w-full p-2 mb-4"
                 >
                     <option value="JavaScript">JavaScript</option>
                     <option value="Python">Python</option>
@@ -35,21 +40,21 @@ function Form() {
                 </select>
 
                 {/* Code Textarea */}
-                <label htmlFor="code" className="mb-2 font-semibold block">
+                <label htmlFor="code" className="mb-2 font-semibold text-amber-50 block">
                     Enter Code:
                 </label>
-                <div className="bg-gray-100 rounded-4xl ">
+                
                 <textarea
                     name="code"
                     id="code"
                     placeholder="Paste your code here..."
-                    className="outline-none overflow-y-auto resize-none  bg-transparent shadow-inner rounded-2xl w-full p-3 h-10 mb-4 overflow-auto"
-                ></textarea></div>
+                    className=" overflow-hidden resize-none  bg-gray-100 shadow-inner rounded-4xl  w-full p-4 h-auto mb-4 "
+                ></textarea>
 
                 {/* Submit */}
                 <button
                     disabled={isPending}
-                    className="px-4 py-2 bg-blue-600 text-white rounded-lg block mx-auto">
+                    className="px-4 py-2 bg-blue-600 text-white rounded-lg block mx-auto overflow-auto">
                     {isPending ? "Explaining..." : "Explain Code"}
                 </button>
                 <input type="button" src="D:\.vscode\CODE-EXPLAINER\frontend\vite-project\src\copy-button-icon-design-visually-perfect-vector.jpg" alt="Copy" height={50} width={50} />
@@ -75,6 +80,8 @@ function Form() {
                 </div>
             )}
         </div>
+        </>
+        
     );
 }
 
