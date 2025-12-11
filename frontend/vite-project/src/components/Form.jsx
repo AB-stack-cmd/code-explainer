@@ -3,7 +3,7 @@ import { action } from "../actions/action";
 import Codecopy from "./Copy";
 import HandleGet from "./handleGet";
 import SideBar from "./SideBar";
-import Pageroutes from "./Pagerouter";
+import SignUpPage from "../pages/Login";
 
 
 
@@ -12,6 +12,7 @@ function Form() {
 
     return (  
         <>
+        {/* <button className="border rounded-md w-3px"onClick={<SignUpPage/>}>Login</button> */}
        
         <div className="p-15">
            

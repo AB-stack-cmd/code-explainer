@@ -1,7 +1,8 @@
 import Header from "./Header";
 // import Form from "./Form";
 import Form from "./Form";
-import Pageroutes from "./Pagerouter.jsx";
+// import Pageroutes from "./Pagerouter";
+import SignUpPage from "../pages/Login";
 
 const CodeEntry = ()=> {
     return (
@@ -9,6 +10,9 @@ const CodeEntry = ()=> {
         <Header/>
         <Form/>
         {/* <Pageroutes/> */}
+        <SignUpPage/>
+
+        
         </div>
     )
 };
